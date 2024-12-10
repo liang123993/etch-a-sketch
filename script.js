@@ -11,7 +11,7 @@ function rainbowFunction() {
     rainbowMode = !rainbowMode
     if (rainbowMode) {
         container.classList.add('rainbowMode') 
-        rainbowBtn.innerHTML = 'normal'
+        rainbowBtn.innerHTML = 'black'
     } else {
         container.classList.remove('rainbowMode') 
         rainbowBtn.innerHTML = 'rainbow'
@@ -55,7 +55,8 @@ function addHover(div) {
     div.addEventListener('mouseover', () => {
         if (rainbowMode) {
             const randomHue = Math.floor(Math.random() * 360);
-            div.style.backgroundColor = `hsl(${randomHue}, 100%, 50%)`;
+            const randomSaturation = Math.floor(Math.random() * 100);
+            div.style.backgroundColor = `hsl(${randomHue}, ${randomSaturation}%, 50%)`;
             div.style.transition = '0.1s'
         } else {
             div.style.backgroundColor = 'black';
@@ -63,3 +64,6 @@ function addHover(div) {
         }
     });
 }
+
+
+createGrid(16)
