@@ -28,11 +28,13 @@ newGridBtn.addEventListener('click', () => {
 })
 
 function resetGrid() {
-    const gridSquares = document.querySelectorAll('div');
+    const gridSquares = document.querySelectorAll('.gridBox');
     gridSquares.forEach(square => {
-        square.style.backgroundColor = '#94e2eb'
-    })
+        square.style.backgroundColor = '#94e2eb'; 
+        square.style.transition = ''; 
+    });
 }
+
 
 resetGridBtn.addEventListener('click', resetGrid);
 
