@@ -1,5 +1,5 @@
 const container = document.getElementById('container');
-const containerSize = 400;
+const containerSize = 500;
 const newGridBtn = document.getElementById('grid-btn');
 const resetGridBtn = document.getElementById('reset');
 const rainbowBtn = document.getElementById('rainbow');
@@ -11,10 +11,10 @@ function rainbowFunction() {
     rainbowMode = !rainbowMode
     if (rainbowMode) {
         container.classList.add('rainbowMode') 
-        rainbowBtn.innerHTML = 'black'
+        rainbowBtn.innerHTML = 'Black'
     } else {
         container.classList.remove('rainbowMode') 
-        rainbowBtn.innerHTML = 'rainbow'
+        rainbowBtn.innerHTML = 'Rainbow'
     }
 }
 
