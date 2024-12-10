@@ -19,6 +19,13 @@ function createGrid(size) {
         div.className = 'gridBox';
         div.style.width = `${boxSize}px`;
         div.style.height = `${boxSize}px`;
+        addHover(div);
         container.appendChild(div)
     }
+}
+
+function addHover(div) {
+    div.addEventListener('mouseover', () => {
+        div.classList.add('hovered')
+    })
 }
