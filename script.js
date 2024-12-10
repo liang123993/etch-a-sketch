@@ -23,7 +23,7 @@ resetGridBtn.addEventListener('click', resetGrid);
 
 function createGrid(size) {
     container.innerHTML = ''; // Clears any existing grid
-    const boxSize = containerSize / size;
+    const boxSize = Math.floor(containerSize / size);
     for (let i = 0; i < size * size; i++) {
         const div = document.createElement('div');
         div.className = 'gridBox';
