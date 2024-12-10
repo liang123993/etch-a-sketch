@@ -54,8 +54,10 @@ function addHover(div) {
         if (rainbowMode) {
             const randomHue = Math.floor(Math.random() * 360);
             div.style.backgroundColor = `hsl(${randomHue}, 100%, 50%)`;
+            div.style.transition = '0.1s'
         } else {
             div.style.backgroundColor = 'black';
+            div.style.transition = '0.1s'
         }
     });
 }
