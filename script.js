@@ -1,6 +1,7 @@
 const container = document.getElementById('container');
 const containerSize = 400;
 const newGridBtn = document.getElementById('grid-btn');
+const resetGridBtn = document.getElementById('reset');
 
 newGridBtn.addEventListener('click', () => {
     const gridSize = parseInt(prompt('Enter grid size: '))
@@ -10,6 +11,15 @@ newGridBtn.addEventListener('click', () => {
         alert("Please enter a valid positive number.");
     }
 })
+
+function resetGrid() {
+    const gridSquares = document.querySelectorAll('div');
+    gridSquares.forEach(square => {
+        square.classList.remove('hovered');
+    })
+}
+
+resetGridBtn.addEventListener('click', resetGrid);
 
 function createGrid(size) {
     container.innerHTML = ''; // Clears any existing grid
